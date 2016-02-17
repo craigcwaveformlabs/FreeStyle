@@ -80,22 +80,6 @@ These are the different field types that we use. Typically they'd always be wrap
     </label>
   </div>
 </div>
-<div class="Form-field">
-<label class="Form-field-label" for="inactive_checkbox_example">
-  Inactive Checkbox Field
-</label>
-  <div class="Form-field-inputs">
-    <input class="Form-checkbox" id="inactive_checkbox_example" type="checkbox" disabled />
-  </div>
-</div>
-<div class="Form-field">
-  <div class="Form-field-inputs">
-    <input class="Form-checkbox" id="inactive_checkbox_example" type="checkbox" disabled />
-    <label class="Form-inlineLabel" for="inactive_checkbox_example">
-      Inactive Checkbox Field with Label Inline
-    </label>
-  </div>
-</div>
 {% endexample %}
 
 
@@ -125,13 +109,15 @@ These are the different field types that we use. Typically they'd always be wrap
 
 {% example html %}
 <div class="Form-field">
-  <label class="Form-field-label Form-field-label--required" for="subdomain">
+  <label class="Form-field-label Form-field-label--required" for="select_example">
     Select Dropdown
   </label>
   <div class="Form-field-inputs">
     <select class="Form-selectInput" id="select_example" name="select_example">
-      <option value="option_one">Option 1</option>
-      <option value="option_two">Option 2</option>
+      <optgroup label="Option Group 1">
+        <option value="option_one">Option 1 is particularly, and some might say, excessively long</option>
+        <option value="option_two">Option 2</option>
+      </optgroup>
     </select>
   </div>
 </div>
@@ -162,20 +148,33 @@ As a general rule we highlight whichever type (optional or required) is in the m
 {% endexample %}
 
 
-### Fields with Errors
+### Errors
 
 {% example html %}
-<div class="Form-field Form-field--isRequired Form-field--hasErrors">
-  <label class="Form-field-label">
-    Email Address
-  </label>
-  <div class="Form-field-inputs">
-    <input class="Form-textInput" placeholder="" type="text" value="nathan.barley.com">
-    <div class="Form-field-error">
-      <span>You must enter a valid email address</span>
-    </div>
+<form class="Form">
+  <div class="Form-errorMessage">
+    <span style="font-weight: bold; display: block; margin-bottom: 0.25rem;">
+      1 error prevented this form being submitted
+    </span>
+    <span>1. Error description one</span>
   </div>
-</div>
+  <fieldset class="Form-fieldset">
+    <span class="Form-fieldset-legend">
+      Fieldset Legend
+    </span>
+    <div class="Form-field Form-field--isRequired Form-field--hasErrors">
+      <label class="Form-field-label">
+        Email Address
+      </label>
+      <div class="Form-field-inputs">
+        <input class="Form-textInput" placeholder="" type="text" value="nathan.barley.com">
+        <div class="Form-field-errorMessage">
+          <span>You must enter a valid email address</span>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>
 {% endexample %}
 
 
@@ -191,6 +190,38 @@ Avoid using placeholders on inactive fields as they may appear to be a saved inp
   Inactive Field</label>
   <div class="Form-field-inputs">
     <input class="Form-textInput" placeholder="" type="text" value="Immutable value" disabled>
+  </div>
+</div>
+<div class="Form-field">
+<label class="Form-field-label" for="inactive_checkbox_example">
+  Inactive Checkbox Field
+</label>
+  <div class="Form-field-inputs">
+    <input class="Form-checkbox" id="inactive_checkbox_example" type="checkbox" disabled />
+  </div>
+</div>
+<div class="Form-field">
+  <div class="Form-field-inputs">
+    <input class="Form-checkbox" id="inactive_checkbox_example" type="checkbox" disabled />
+    <label class="Form-inlineLabel" for="inactive_checkbox_example">
+      Inactive Checkbox Field with Label Inline
+    </label>
+  </div>
+</div>
+<div class="Form-field">
+  <label class="Form-field-label Form-field-label--required" for="subdomain">
+    Radio Group
+  </label>
+  <div class="Form-field-inputs">
+    <input class="Form-radioInput" id="option_one" name="radio_example" type="radio" disabled />
+    <label class="Form-inlineLabel" for="option_one">
+      Option 1
+    </label>
+    <br>
+    <input class="Form-radioInput" id="option_two" name="radio_example" type="radio" disabled />
+    <label class="Form-inlineLabel" for="option_two">
+      Option 2
+    </label>
   </div>
 </div>
 <div class="Form-field">
@@ -218,30 +249,6 @@ Avoid using placeholders on inactive fields as they may appear to be a saved inp
       Fieldset Legend
     </span>
     <div class="Form-field">
-      <label class="Form-field-label Form-field-label--required" for="first-name">
-        First Name
-      </label>
-      <div class="Form-field-inputs">
-        <input class="Form-textInput" name="first-name" placeholder="Nathan" type="text" />
-      </div>
-    </div>
-    <div class="Form-field">
-      <label class="Form-field-label Form-field-label--required" for="last-name">
-        Last Name
-      </label>
-      <div class="Form-field-inputs">
-        <input class="Form-textInput" name="last-name" placeholder="Barley" type="text" />
-      </div>
-    </div>
-    <div class="Form-field">
-      <label class="Form-field-label Form-field-label--required" for="first-name">
-        Company
-      </label>
-      <div class="Form-field-inputs">
-        <input class="Form-textInput" disabled name="first-name" placeholder="" type="text" value="Medianode" />
-      </div>
-    </div>
-    <div class="Form-field">
       <label class="Form-field-label" for="email-address">
         Billing Email Address
       </label>
@@ -253,14 +260,6 @@ Avoid using placeholders on inactive fields as they may appear to be a saved inp
       </div>
     </div>
     <div class="Form-field">
-      <label class="Form-field-label" for="personal-account">
-        This is a personal account
-      </label>
-      <div class="Form-field-inputs">
-        <input class="Form-checkbox" id="personal-account" type="checkbox" />
-      </div>
-    </div>
-    <div class="Form-field">
       <div class="Form-field-inputs">
         <input class="Form-checkbox" id="vat-registered?" type="checkbox" />
         <label class="Form-inlineLabel" for="vat-registered?">
@@ -269,28 +268,6 @@ Avoid using placeholders on inactive fields as they may appear to be a saved inp
         <span class="Form-inputNote">
           VAT registration affects FreeAgent's tax calculations.
         </span>
-      </div>
-    </div>
-    <div class="Form-field">
-      <label class="Form-field-label">
-
-        Online Payment Options
-      </label>
-      <div class="Form-field-inputs">
-        <input class="Form-checkbox" id="gc-mandate" type="checkbox" />
-        <label class="Form-inlineLabel" for="gc-mandate">
-          GoCardless Direct Debit Mandate
-        </label>
-        <br>
-        <input class="Form-checkbox" id="gc-one-off" type="checkbox" />
-        <label class="Form-inlineLabel" for="gc-one-off">
-          GoCardless through Payment Portal
-        </label>
-        <br>
-        <input class="Form-checkbox" id="paypal" type="checkbox" disabled />
-        <label class="Form-inlineLabel" for="paypal">
-          PayPal
-        </label>
       </div>
     </div>
   </fieldset>
@@ -346,11 +323,14 @@ Avoid using placeholders on inactive fields as they may appear to be a saved inp
       Fieldset Legend
     </span>
     <div class="Form-field">
-      <label class="Form-field-label Form-field-label--required" for="first-name">
-        First Name
+      <label class="Form-field-label" for="email-address">
+        Billing Email Address
       </label>
       <div class="Form-field-inputs">
-        <input class="Form-textInput" name="first-name" placeholder="Nathan" type="text" />
+        <input class="Form-textInput" name="email-address" placeholder="nathan@medianode.com" type="email" />
+        <span class="Form-inputNote">
+          This is the address that invoices will be sent to.
+        </span>
       </div>
     </div>
     <div class="Form-field">
@@ -424,6 +404,14 @@ A variant of the desktop form with the field labels stacked on top of the inputs
       </label>
       <div class="Form-field-inputs">
         <input class="Form-textInput" name="first-name" placeholder="Nathan" type="text" />
+      </div>
+    </div>
+    <div class="Form-field">
+      <label class="Form-field-label Form-field-label--required" for="first-name">
+        Last Name
+      </label>
+      <div class="Form-field-inputs">
+        <input class="Form-textInput" name="first-name" placeholder="Barley" type="text" />
       </div>
     </div>
     <div class="Form-field">
