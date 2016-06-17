@@ -160,7 +160,7 @@ The linter is configured via [`.scss-lint.yml`](https://github.com/fac/origin/bl
 
 #### Let people know, consider upgrading other projects
 
-If this a major or minor release, let people in the #design and/or #dev Slack channels know by linking to the release. Consider bringing other projects up to date with your new release, especially [Origin](https://github.com/fac/origin).
+If this a major or minor release, let people in the #design and/or #origin Slack channels know by linking to the release. Consider bringing other projects up to date with your new release, especially [Origin](https://github.com/fac/origin).
 
 
 ## License
