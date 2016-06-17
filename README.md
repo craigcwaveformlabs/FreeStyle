@@ -87,22 +87,24 @@ This takes the `_site` directory, generates its own Git repository there, and pu
 
 ## Implementing Origin into a project
 
-These instructions assume you’re implementing Origin into a new or existing project. Origin is installed via npm, and assumes your project already has mechanisms in place for compiling Sass.
+Origin is installed via a gem, and assumes your project already has mechanisms in place for compiling Sass.
+Originally origin was installed via npm, this is now deprecated and will be removed.  
 
-Requirements: [Node.js and npm](http://nodejs.org/download/).
+In your `Gemfile` add the origin dependency and replace `x.x.x` with the version you wish to install.
 
-```bash
-$ cd <your-project-directory>
-$ npm install origin-css --save
+```
+gem "origin", "x.x.x",  :github => "git@github.com:fac/origin.git"
 ```
 
-This will add the Origin files to a new `origin-css` directory inside the `node_modules` directory at the root of your project, and save `origin-css` as a dependency in your `package.json` file. If npm isn’t yet being used in your project, running the above command will create the `node_modules` directory too.
+After you have added origin to your `Gemfile` run:
 
-You’ll want to [create a package](https://docs.npmjs.com/cli/init) to manage your npm dependencies, and most likely add a new rule to `.gitignore` to ignore the `node_modules` directory unless your project explicitly dictates that you shouldn't.
+```bash
+$ bundle install
+```
 
 After installing, do the following:
 
-1. Copy the contents of [/origin-css/assets/scss/local](https://github.com/fac/origin/tree/master/assets/scss/local) to your project’s stylesheet directory. Just the contents, not the directory itself. _To update the FreeAgent app, drag the `origin-css` folder out of the `node_modules` directory and drop it inside `vendor/assets/components`, overwriting the previous version._
+1. Copy the contents of [/origin-css/assets/scss/local](https://github.com/fac/origin/tree/master/assets/scss/local) to your project’s stylesheet directory. Just the contents, not the directory itself.
 
 2. Open [_utility-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/utilities/_utility-settings.scss) and set all utility variables to `false`. These are `true` by default because the Origin docs use them, but each one left as `true` will add weight to your output CSS, so only do so when you need them.
 
