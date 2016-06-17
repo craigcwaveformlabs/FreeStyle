@@ -27,7 +27,7 @@ Note that [scss-lint](https://github.com/brigade/scss-lint) will check for SCSS 
 * Leave one space between each CSS combinator character and your selectors.
 * Use a semi-colon after every CSS declaration, even the last one in a rule set.
 * Include a space after each comma in comma-separated property or function values.
-* Don’t nest declarations more than one-level deep.
+* Don't nest declarations other than media query mixins and pseudo-classes (e.g. :hover, :active, :visited).
 
 ### CSS writing style
 * Use lowercase and shorthand hex values (e.g. `#aaa`).

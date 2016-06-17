@@ -103,13 +103,16 @@ button:focus {
  * Positive button variant
  *
  * Used as primary CTA for completing tasks e.g. sending an invoice
+ *
+ * 1. Using `!important` to override default hyperlink styles.
  */
 
 .Button--primary {
   @include box-shadow(0, 1px, 1px, rgba(0, 0, 0, .12));
   @include linear-gradient($color--fa-green, darken($color--fa-green, 5%));
+  /* 1 */
+  @include text-color(fa-white, !important);
   border-color: darken($color--fa-green, 3%) darken($color--fa-green, 6%) darken($color--fa-green, 12%);
-  color: #fff;
   text-shadow: 0 1px 0 darken($color--fa-green, 14%);
 }
 
