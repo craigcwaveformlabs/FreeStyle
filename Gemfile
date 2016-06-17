@@ -1,11 +1,10 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-require 'json'
-require 'open-uri'
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+require "json"
+require "open-uri"
 
-gem 'github-pages', versions['github-pages']
+gem "github-pages", "82"
 
-gem 'jekyll'
-gem 'rouge'
-gem 'sass'
+gem "jekyll", "3.1.6"
+gem "rouge", "1.10.1"
+gem "sass",  "3.4.22"
