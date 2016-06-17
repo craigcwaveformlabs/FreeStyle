@@ -1,3 +1,3 @@
 module Origin
-  VERSION = "0.0.1"
+  VERSION = "1.2.12"
 end
