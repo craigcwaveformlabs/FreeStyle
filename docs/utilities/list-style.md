@@ -13,7 +13,13 @@ Apply `list-style` values using our utility classes.
 * `disc`
 * `disc-inside`
 * `disc-outside`
+* `lower-alpha`
+* `lower-alpha-inside`
+* `lower-alpha-outside`
 * `none`
+* `upper-alpha`
+* `upper-alpha-inside`
+* `upper-alpha-outside`
 
 ### Examples
 {% example html %}
@@ -65,9 +71,57 @@ Apply `list-style` values using our utility classes.
 {% endexample %}
 
 {% example html %}
+<ul class="u-list-style--lower-alpha">
+  <li>Lower-alpha list style</li>
+  <li>Lower-alpha list style</li>
+  <li>Lower-alpha list style</li>
+</ul>
+{% endexample %}
+
+{% example html %}
+<ul class="u-list-style--lower-alpha-inside">
+  <li>Lower-alpha-inside list style</li>
+  <li>Lower-alpha-inside list style</li>
+  <li>Lower-alpha-inside list style</li>
+</ul>
+{% endexample %}
+
+{% example html %}
+<ul class="u-list-style--lower-alpha-outside">
+  <li>lower-alpha-outside list style</li>
+  <li>lower-alpha-outside list style</li>
+  <li>lower-alpha-outside list style</li>
+</ul>
+{% endexample %}
+
+{% example html %}
 <ul class="u-list-style--none">
   <li>No list style</li>
   <li>No list style</li>
   <li>No list style</li>
+</ul>
+{% endexample %}
+
+{% example html %}
+<ul class="u-list-style--upper-alpha">
+  <li>Upper-alpha list style</li>
+  <li>Upper-alpha list style</li>
+  <li>Upper-alpha list style</li>
+</ul>
+{% endexample %}
+
+{% example html %}
+<ul class="u-list-style--upper-alpha-inside">
+  <li>Upper-alpha-inside list style</li>
+  <li>Upper-alpha-inside list style</li>
+  <li>Upper-alpha-inside list style</li>
+</ul>
+{% endexample %}
+
+{% example html %}
+<ul class="u-list-style--upper-alpha-outside">
+  <li>Upper-alpha-outside list style</li>
+  <li>Upper-alpha-outside list style</li>
+  <li>Upper-alpha-outside list style</li>
 </ul>
 {% endexample %}

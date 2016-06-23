@@ -698,7 +698,13 @@ $list-style-values:
   (disc, disc)
   (disc-inside, disc inside)
   (disc-outside, disc outside)
-  (none, none);
+  (lower-alpha, lower-alpha)
+  (lower-alpha-inside, lower-alpha inside)
+  (lower-alpha-outside, lower-alpha outside)
+  (none, none)
+  (upper-alpha, upper-alpha)
+  (upper-alpha-inside, upper-alpha inside)
+  (upper-alpha-outside, upper-alpha outside);
 
 
 /* `opacity`
