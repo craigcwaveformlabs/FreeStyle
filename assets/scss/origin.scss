@@ -15,8 +15,9 @@
  * https://github.com/fac/origin/blob/master/README.md
  */
 
- /* Mixins */
- @import "mixins/_heading";
+
+/* UTILITIES & SETTINGS - The groundwork that Origin is built on
+   ===========================================================================*/
 
 /* Local: font settings — copy file if implementing Origin into a project */
 @import "local/fonts/_font-settings";
@@ -43,8 +44,30 @@
 /* Global: load fonts for `@font-face` use */
 @import "global/fonts/_source-sans-pro";
 
+
+/* TOOLS & MIXINS - Useful tools for keeping our code DRY and consistent
+   ===========================================================================*/
+
+/* Mixins */
+@import "mixins/_heading";
+
+
+/* RESET - Resets the default browser styles to give us a consistent canvas
+   ===========================================================================*/
+
+/* Normalize: reset the browser's default styles */
+@import "utilities/_normalize";
+
+
+/* BASE - Unclassed HTML styles common to all our projects
+   ===========================================================================*/
+
 /* Local: base styles — copy file if implementing Origin into a project */
 @import "local/base/_base";
+
+
+/* COMPONENTS - Import the components used in this project
+   ===========================================================================*/
 
 /* Global: import any required components; comment out those not required */
 @import "global/components/_button";
@@ -60,9 +83,9 @@
 @import "global/components/_table";
 @import "global/components/_tabs";
 
+
+/* PROJECT STYLES - Non-Origin styles and overrides specific to this project
+   ===========================================================================*/
+
 /* Docs styles — remove file reference if documentation styles aren’t needed */
 @import "docs/_docs";
-
-/**
- * You’re safe to include your project styles below here...
- */
