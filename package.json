@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/fac/origin/issues"
   },
-  "main": "assets/scss/origin.scss",
+  "main": "assets/scss/master.scss",
   "directories": {
     "doc": "docs"
   },
