@@ -145,7 +145,7 @@ Those same mixins can be used in any `.scss` file to invoke the same styles.
 
 ## Key files
 
-#### [origin.scss]({{ site.github.repo }}/blob/master/assets/scss/origin.scss)  
+#### [master.scss]({{ site.github.repo }}/blob/master/assets/scss/master.scss)  
 Master file where all required `.scss` partials are `@import`ed.
 
 #### [_utility-values.scss]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss)  
