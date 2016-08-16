@@ -27,7 +27,7 @@ Note that [scss-lint](https://github.com/brigade/scss-lint) will check for SCSS 
 * Leave one space between each CSS combinator character and your selectors.
 * Use a semi-colon after every CSS declaration, even the last one in a rule set.
 * Include a space after each comma in comma-separated property or function values.
-* Don’t nest declarations more than one-level deep.
+* Don't nest declarations other than media query mixins and pseudo-classes (e.g. :hover, :active, :visited).
 
 ### CSS writing style
 * Use lowercase and shorthand hex values (e.g. `#aaa`).
@@ -63,7 +63,7 @@ h3 > p {
 {% endhighlight %}
 
 #### CSS declaration order
-`@include` rules are declared first, as they are our first class citizens; our own properties and values as derived from [fa-css-utilities](https://github.com/fac/fa-css-utilities). Regular CSS declarations are listed afterwards. Be sure to write all `@include` and regular CSS rules in alphabetical order.
+`@include` rules are declared first, as they are our first class citizens; our own properties and values as derived from our [utilities]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/utilities). Regular CSS declarations are listed afterwards. Be sure to write all `@include` and regular CSS rules in alphabetical order.
 
 Example:
 

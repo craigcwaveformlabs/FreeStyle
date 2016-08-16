@@ -1,6 +1,7 @@
 ---
 categories: components
 layout: page
+scss-filename: _button.scss
 title: Button
 ---
 
@@ -152,7 +153,7 @@ Buttons can have multiple labels. Secondary labels can be useful to lead into pr
   <span class="Button-label Button-label--secondary">
     Button secondary label
   </span>
-  <span class="Button-label Button-label--primary">
+  <span class="Button-label">
     Button primary label
   </span>
 </button>
@@ -161,7 +162,7 @@ Buttons can have multiple labels. Secondary labels can be useful to lead into pr
   <span class="Button-label Button-label--secondary">
     Button secondary label
   </span>
-  <span class="Button-label Button-label--primary">
+  <span class="Button-label">
     Button primary label
   </span>
 </button>
