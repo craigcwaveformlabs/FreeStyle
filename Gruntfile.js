@@ -59,7 +59,10 @@ module.exports = function(grunt) {
         config: '.scss-lint.yml',
         exclude: [
           'assets/scss/global/utilities/_normalize.scss',
-          'assets/scss/global/utilities/_utility-values.scss'
+          'assets/scss/global/utilities/_utility-values.scss',
+          'assets/scss/global/utilities/utilities/_font-size.scss',
+          'assets/scss/global/utilities/utilities/_margin.scss',
+          'assets/scss/global/utilities/utilities/_padding.scss'
         ],
         reporterOutput: 'scss-lint-report.xml'
       }
