@@ -299,17 +299,13 @@ button:focus {
   text-align: left;
 }
 .Button--dropdown--contents li a {
-  padding-bottom: 0.35em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.25em;
+  padding: 0;
   display:block;
   border-top: 1px solid #f1f1f1;
   white-space: nowrap;
 }
 .Button--dropdown--contents li a:hover {
-  background-color: #28638c;
-  color: #fff;
+  @include background-color(fa-blue--x-light);
 }
 .Button--dropdown:hover {
   border-bottom-color: rgba(0,0,0,0);
