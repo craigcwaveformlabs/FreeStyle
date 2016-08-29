@@ -182,7 +182,14 @@ A single button can contain multiple actions by converting it into a dropdown bu
 <div class="Button Button--legacy Button--primary Button--dropdown" type="button">
   Button
   <ul class="Button--dropdown--contents">
-    <li><a href="">One</a></li>
+    <li><a href="">One, two, three, four, etc.</a></li>
+  </ul>
+</div>
+
+<div class="Button Button--legacy Button--primary Button--dropdown u-float--right" type="button">
+  Right-aligned
+  <ul class="Button--dropdown--contents Button--dropdown--contents--right">
+    <li><a href="">One, two, three, four, etc.</a></li>
   </ul>
 </div>
 {% endexample %}
