@@ -451,14 +451,13 @@ $font-family-values: (
 /* `font-size`
    ========================================================================== */
 
-/* Function to convert `px` to `rem` */
+/* Base typographic unit, equal to web browser default */
+$base-unit: 16;
 
+/* Function to convert `px` to `rem` */
 @function rem($pixels, $context: $base-unit) {
   @return #{$pixels / $context}rem;
 }
-
-/* Base typographic unit, equal to web browser default */
-$base-unit: 16;
 
 /* Values */
 $font-size--1:  rem(9);
