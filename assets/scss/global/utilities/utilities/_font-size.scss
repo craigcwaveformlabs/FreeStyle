@@ -9,17 +9,9 @@
  * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
-/* Function to convert `px` to `rem` */
-@function rem($pixels, $context: $base-unit) {
-  @return #{$pixels / $context}rem;
-}
-
-
 @mixin font-size($value, $important: null) {
-  font-size: map-get($font-size-values, $value)px $important;
-  font-size: rem(map-get($font-size-values, $value)) $important;
+  font-size: map-get($font-size-values, $value) $important;
 }
-
 
 /* Utility classes
    ========================================================================== */
@@ -37,8 +29,7 @@
      */
 
     .u-font-size--#{$font-size} {
-      font-size: $standard-scale-font-size-value + px !important;
-      font-size: rem($standard-scale-font-size-value) !important;
+      font-size: $standard-scale-font-size-value !important;
     }
 
     @each $breakpoint-size, $breakpoint-value in $breakpoint-values {

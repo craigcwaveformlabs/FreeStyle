@@ -3,11 +3,6 @@
    http://fac.github.io/origin/utilities/padding/
 */
 
-/* Function to convert rem to px */
-@function px($rems, $context: $base-unit) {
-  @return #{$rems * $context};
-}
-
 /**
  * This mixin allows us to use shorthand values for the `padding` property.
  *
@@ -17,38 +12,30 @@
  */
 
 @mixin padding($values, $important: null) {
-  $pxValueList: ();
-  $remValueList: ();
+  $valueList: ();
 
   @for $i from 1 through length($values) {
-    $pxValue: px(map-get($spacing-values, nth($values, $i))) + px;
-    $pxValueList: append($pxValueList, $pxValue, space);
-    $remValue: map-get($spacing-values, nth($values, $i)) + rem;
-    $remValueList: append($remValueList, $remValue, space);
+    $value: map-get($spacing-values, nth($values, $i));
+    $valueList: append($remValueList, $remValue, space);
   }
 
-  padding: $pxValueList $important;
-  padding: $remValueList $important;
+  padding: $valueList $important;
 }
 
 @mixin padding-bottom($value, $important: null) {
-  padding-bottom: px(map-get($spacing-values, $value)) + px $important;
-  padding-bottom: map-get($spacing-values, $value) + rem $important;
+  padding-bottom: map-get($spacing-values, $value) $important;
 }
 
 @mixin padding-left($value, $important: null) {
-  padding-left: px(map-get($spacing-values, $value)) + px $important;
-  padding-left: map-get($spacing-values, $value) + rem $important;
+  padding-left: map-get($spacing-values, $value) $important;
 }
 
 @mixin padding-right($value, $important: null) {
-  padding-right: px(map-get($spacing-values, $value)) + px $important;
-  padding-right: map-get($spacing-values, $value) + rem $important;
+  padding-right: map-get($spacing-values, $value) $important;
 }
 
 @mixin padding-top($value, $important: null) {
-  padding-top: px(map-get($spacing-values, $value)) + px $important;
-  padding-top: map-get($spacing-values, $value) + rem $important;
+  padding-top: map-get($spacing-values, $value) $important;
 }
 
 
@@ -62,28 +49,23 @@
    */
 
   .u-padding {
-    padding: px($spacing--default) + px !important;
-    padding: $spacing--default + rem !important;
+    padding: $spacing--default !important;
   }
 
   .u-padding-bottom {
-    padding-bottom: px($spacing--default) + px !important;
-    padding-bottom: $spacing--default + rem !important;
+    padding-bottom: $spacing--default !important;
   }
 
   .u-padding-left {
-    padding-left: px($spacing--default) + px !important;
-    padding-left: $spacing--default + rem !important;
+    padding-left: $spacing--default !important;
   }
 
   .u-padding-right {
-    padding-right: px($spacing--default) + px !important;
-    padding-right: $spacing--default + rem !important;
+    padding-right: $spacing--default !important;
   }
 
   .u-padding-top {
-    padding-top: px($spacing--default) + px !important;
-    padding-top: $spacing--default + rem !important;
+    padding-top: $spacing--default !important;
   }
 
   @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
@@ -142,37 +124,29 @@
      */
 
     .u-padding--#{$spacing-size} {
-      padding: px($standard-scale-spacing-value) + px !important;
-      padding: $standard-scale-spacing-value + rem !important;
+      padding: $standard-scale-spacing-value !important;
     }
 
     .u-padding-bottom--#{$spacing-size} {
-      padding-bottom: px($standard-scale-spacing-value) + px !important;
-      padding-bottom: $standard-scale-spacing-value + rem !important;
+      padding-bottom: $standard-scale-spacing-value !important;
     }
 
     .u-padding-left--#{$spacing-size} {
-      padding-left: px($standard-scale-spacing-value) + px !important;
-      padding-left: $standard-scale-spacing-value + rem !important;
+      padding-left: $standard-scale-spacing-value !important;
     }
 
     .u-padding-right--#{$spacing-size} {
-      padding-right: px($standard-scale-spacing-value) + px !important;
-      padding-right: $standard-scale-spacing-value + rem !important;
+      padding-right: $standard-scale-spacing-value !important;
     }
 
     .u-padding-top--#{$spacing-size} {
-      padding-top: px($standard-scale-spacing-value) + px !important;
-      padding-top: $standard-scale-spacing-value + rem !important;
+      padding-top: $standard-scale-spacing-value !important;
     }
 
     @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
 
       /**
        * Generate standard scale of spacing classes with breakpoints
-       *
-       * These don't have IE8 fallbacks because IE8 ignores media
-       * queries anyway.
        */
 
       @include break($breakpoint-size) {
