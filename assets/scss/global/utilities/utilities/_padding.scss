@@ -76,9 +76,6 @@
       * Note that classes will not be generated for the full scale of spacing
       * values, only the standard `xx-small` > `xx-large` scale, because in
       * practice the full scale has never been needed.
-      *
-      * These don't have IE8 fallbacks because IE8 ignores media
-      * queries anyway.
       */
 
     @include break($breakpoint-size) {
