@@ -77,6 +77,18 @@ module.exports = function(grunt) {
       }
     },
 
+    // Copy content of js directory
+    copy: {
+      main: {
+        files: [{
+          expand: true,
+          cwd: 'assets/js/',
+          src: ['**'],
+          dest: '_site/assets/js'
+          }]
+      }
+    },
+
 
     // Publishing docs to GitHub Pages
     buildcontrol: {
