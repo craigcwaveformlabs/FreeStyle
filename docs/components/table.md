@@ -92,6 +92,16 @@ Used to give prominence to unique rows, such as totals in a reporting table.
       <td class="Table-cell">Prominent and bold table cell</td>
       <td class="Table-cell">Prominent and bold table cell</td>
     </tr>
+    <tr class="Table-row Table-row--prominent">
+      <td class="Table-cell">An additional prominent row</td>
+      <td class="Table-cell">An additional prominent row</td>
+      <td class="Table-cell">An additional prominent row</td>
+    </tr>
+    <tr class="Table-row Table-row--prominent">
+      <td class="Table-cell">An additional prominent row</td>
+      <td class="Table-cell">An additional prominent row</td>
+      <td class="Table-cell">An additional prominent row</td>
+    </tr>
     <tr class="Table-row Table-row--bold">
       <td class="Table-cell">Bold table cell</td>
       <td class="Table-cell">Bold table cell</td>

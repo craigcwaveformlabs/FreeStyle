@@ -190,8 +190,12 @@ $Table-border-color: $color--gray-15;
 .Table-row--prominent .Table-header {
   @include background-color(gray-14);
   @include text-color(gray-4);
-  border-top: 0;
+  border-top: 1px solid #fff;
 }
+
+/*.Table-row--prominent ~ .Table-row--prominent > .Table-cell {
+  border-top: 1px solid #fff;
+}*/
 
 /**
  * Add white separating borders between cells and headers when required.
