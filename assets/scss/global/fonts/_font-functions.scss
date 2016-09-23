@@ -33,10 +33,6 @@
 @function choose-browser-formats() {
   $chosen-formats: ();
 
-  @if $support-ie8 {
-    $chosen-formats: append($chosen-formats, embedded-opentype);
-  }
-
   @if $use-opentype {
     $chosen-formats: join($chosen-formats, opentype-woff opentype-woff2 opentype);
   } @else {
