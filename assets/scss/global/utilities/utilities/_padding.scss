@@ -16,7 +16,7 @@
 
   @for $i from 1 through length($values) {
     $value: map-get($spacing-values, nth($values, $i));
-    $valueList: append($remValueList, $remValue, space);
+    $valueList: append($valueList, $value, space);
   }
 
   padding: $valueList $important;
