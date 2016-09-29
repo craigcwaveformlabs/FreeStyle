@@ -19,31 +19,30 @@
 /* UTILITIES & SETTINGS - The groundwork that Origin is built on
    ===========================================================================*/
 
-/* Local: font settings — copy file if implementing Origin into a project */
+/* LOCAL - Create local versions of these files in your project
+   ---------------------------------------------------------------------------*/
+
+/* Local: font settings — options for browser support and opentype */
 @import "local/fonts/_font-settings";
+
+/* Local: utility settings — which utilities to import into your project */
+@import "local/utilities/_utility-settings";
+
+/* Other Local Settings */
+@import "local/fonts/_heading-settings";
+
+
+/* GLOBAL - These paths should point to the files in Origin
+   ---------------------------------------------------------------------------*/
 
 /* Global: functions to handle fonts correctly based on font settings */
 @import "global/fonts/_font-functions";
 
 /* Global: load fonts for `@font-face` use */
 @import "global/fonts/_source-sans-pro";
-
-/* Local: utility settings — copy file if implementing Origin into a project */
-@import "local/utilities/_utility-settings";
 
 /* Global: import utilities */
 @import "global/utilities/_utilities";
-
-/* Settings: required */
-@import "local/fonts/_font-settings";
-@import "local/fonts/_heading-settings";
-
-/* Global: functions to handle fonts correctly based on font settings */
-@import "global/fonts/_font-functions";
-
-/* Global: load fonts for `@font-face` use */
-@import "global/fonts/_source-sans-pro";
-
 
 /* TOOLS & MIXINS - Useful tools for keeping our code DRY and consistent
    ===========================================================================*/
