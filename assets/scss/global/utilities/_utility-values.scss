@@ -454,29 +454,24 @@ $font-family-values: (
 /* Base typographic unit, equal to web browser default */
 $base-unit: 16;
 
-/* Function to convert `px` to `rem` */
-@function rem($pixels, $context: $base-unit) {
-  @return #{$pixels / $context}rem;
-}
-
-/* Values */
-$font-size--1:  rem(9);
-$font-size--2:  rem(10);
-$font-size--3:  rem(11);
-$font-size--4:  rem(12);
-$font-size--5:  rem(14);
-$font-size--6:  rem(16);
-$font-size--7:  rem(18);
-$font-size--8:  rem(21);
-$font-size--9:  rem(24);
-$font-size--10: rem(28);
-$font-size--11: rem(32);
-$font-size--12: rem(36);
-$font-size--13: rem(42);
-$font-size--14: rem(48);
-$font-size--15: rem(54);
-$font-size--16: rem(60);
-$font-size--17: rem(72);
+/* Values in pixels */
+$font-size--1:  9;
+$font-size--2:  10;
+$font-size--3:  11;
+$font-size--4:  12;
+$font-size--5:  14;
+$font-size--6:  16;
+$font-size--7:  18;
+$font-size--8:  21;
+$font-size--9:  24;
+$font-size--10: 28;
+$font-size--11: 32;
+$font-size--12: 36;
+$font-size--13: 42;
+$font-size--14: 48;
+$font-size--15: 54;
+$font-size--16: 60;
+$font-size--17: 72;
 
 /* Aliases */
 $font-size--xx-small: $font-size--3;
@@ -698,7 +693,13 @@ $list-style-values:
   (disc, disc)
   (disc-inside, disc inside)
   (disc-outside, disc outside)
-  (none, none);
+  (lower-alpha, lower-alpha)
+  (lower-alpha-inside, lower-alpha inside)
+  (lower-alpha-outside, lower-alpha outside)
+  (none, none)
+  (upper-alpha, upper-alpha)
+  (upper-alpha-inside, upper-alpha inside)
+  (upper-alpha-outside, upper-alpha outside);
 
 
 /* `opacity`
@@ -759,23 +760,23 @@ $top-values:
 
 /* Values */
 $spacing--0:  0;
-$spacing--1:  .15em;
-$spacing--2:  .25em;
-$spacing--3:  .5em;
-$spacing--4:  .75em;
-$spacing--5:  1em;
-$spacing--6:  1.25em;
-$spacing--7:  1.5em;
-$spacing--8:  1.75em;
-$spacing--9:  2em;
-$spacing--10: 2.25em;
-$spacing--11: 2.5em;
-$spacing--12: 2.75em;
-$spacing--13: 3em;
-$spacing--14: 3.5em;
-$spacing--15: 4em;
-$spacing--16: 4.5em;
-$spacing--17: 5em;
+$spacing--1:  .15;
+$spacing--2:  .25;
+$spacing--3:  .5;
+$spacing--4:  .75;
+$spacing--5:  1;
+$spacing--6:  1.25;
+$spacing--7:  1.5;
+$spacing--8:  1.75;
+$spacing--9:  2;
+$spacing--10: 2.25;
+$spacing--11: 2.5;
+$spacing--12: 2.75;
+$spacing--13: 3;
+$spacing--14: 3.5;
+$spacing--15: 4;
+$spacing--16: 4.5;
+$spacing--17: 5;
 
 /* Aliases */
 $spacing--xx-small: $spacing--1;
