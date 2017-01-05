@@ -41,7 +41,7 @@ $ npm install -g grunt-cli (if you don’t already have Grunt installed)
 
 ## Origin
 
-FreeStyle is forked from and linked to [Origin](http://fac.github.io/origin/). Go have a read of that. Its super.
+FreeStyle is forked from and linked to [Origin](https://github.com/fac/origin). Go have a read of that. Its super.
 
 ## Documentation
 
