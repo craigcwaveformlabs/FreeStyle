@@ -6,8 +6,8 @@ permalink: pretty
 port: 8001
 
 # Because the deployed site doesn’t live at the root fac.github.io URL; it lives
-# at fac.github.io/origin
-baseurl: "/origin"
+# at fac.github.io/freestyle
+baseurl: "/freestyle"
 
 # Because we use pages rather than posts for our content, we have to list those
 # categories here to be able to list pages by category
@@ -29,7 +29,7 @@ sass:
   style: compressed
 
 github:
-  repo: https://github.com/fac/origin
+  repo: https://github.com/craigcwaveformlabs/freestyle
 
 # Prevent Jekyll from clobbering assets that Grunt handles
 keep_files: ['_site/assets/css', '_site/assets/fonts', '_site/assets/js']
