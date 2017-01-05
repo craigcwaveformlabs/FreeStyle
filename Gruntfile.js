@@ -88,7 +88,7 @@ module.exports = function(grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:fac/origin.git',
+          remote: 'git@github.com:craigcwaveformlabs/freestyle.git',
           branch: 'gh-pages'
         }
       }
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
         },
         options: {
           port: 9001,
-          proxy: "http://0.0.0.0:8001/origin/"
+          proxy: "http://0.0.0.0:8001/freestyle/"
         }
       }
     },

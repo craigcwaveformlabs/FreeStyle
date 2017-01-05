@@ -1,13 +1,13 @@
 {
-  "name": "origin-css",
-  "version": "1.3.1",
-  "homepage": "http://fac.github.io/origin",
+  "name": "freestyle",
+  "version": "1.0.0",
+  "homepage": "http://craigcwaveformlabs.github.io/freestyle",
   "author": "FreeAgent",
-  "scss": "./assets/scss/origin.scss",
+  "scss": "./assets/scss/freestyle.scss",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fac/origin.git"
+    "url": "git+https://github.com/craigcwaveformlabs/freestyle.git"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -22,9 +22,9 @@
     "load-grunt-tasks": "~0.6.0",
     "time-grunt": "~0.4.0"
   },
-  "description": "Origin is FreeAgent’s internal CSS framework. We’re a growing team working across a range of different projects and codebases, and making CSS work at scale is hard. Agreed principles, approaches, and patterns mean we can do better work faster. That’s what Origin gives us.",
+  "description": "FreeStyle is FreeAgent’s design system. Bully for us.",
   "bugs": {
-    "url": "https://github.com/fac/origin/issues"
+    "url": "https://github.com/craigcwaveformlabs/freestyle/issues"
   },
   "main": "assets/scss/master.scss",
   "directories": {
@@ -34,9 +34,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "freestyle",
+    "designsystem"
     "origin",
-    "css",
-    "freeagent",
-    "origincss"
+    "freeagent"
   ]
 }
