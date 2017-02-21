@@ -3,6 +3,7 @@ categories: components
 layout: page
 scss-filename: _navbar.scss
 title: NavBar
+order: 1
 ---
 
 The NavBar is the section in each of our apps which contains the main view

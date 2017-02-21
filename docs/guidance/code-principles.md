@@ -1,7 +1,7 @@
 ---
 categories: guidance
 layout: page
-title: Principles
+title: Code principles
 ---
 
 We write HTML & CSS using a component-based methodology. It massively improves the authoring experience, ease of maintenance, and code quality.

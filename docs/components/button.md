@@ -3,6 +3,7 @@ categories: components
 layout: page
 scss-filename: _button.scss
 title: Button
+order: 1
 ---
 
 Note: this is candidate component and is not currently being used in production

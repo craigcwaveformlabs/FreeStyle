@@ -3,6 +3,7 @@ categories: components
 layout: page
 scss-filename: _heading.scss
 title: Heading
+order: 1
 ---
 
 The Heading component provides a scale of headings that can be applied to any element, creating consistency and avoiding inheritance issues that come with targeting bare HTML elements.

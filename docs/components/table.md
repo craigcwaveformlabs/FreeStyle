@@ -3,6 +3,7 @@ categories: components
 layout: page
 scss-filename: _table.scss
 title: Table
+order: 1
 ---
 
 * Will be replaced with the ToC, excluding the "Contents" header

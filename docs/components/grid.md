@@ -1,8 +1,9 @@
 ---
 categories: components
-layout: simple-full-width
+layout: page
 scss-filename: _grid.scss
 title: Grid
+order: 1
 ---
 
 Our 12-column mobile-first responsive grid system helps us tightly control layouts as viewport widths vary. Breakpoints are defined in our [utility values]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss).

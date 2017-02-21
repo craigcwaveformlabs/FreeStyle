@@ -1,7 +1,8 @@
 ---
-categories: guidance
-layout: page
+categories: components
+layout: holy
 title: Components
+order: 0
 ---
 
 Components are groups of [utilities]({{ site.baseurl }}/guidance/utilities) (and often vanilla CSS) designed to perform a specific functional purpose. [Button]({{ site.baseurl }}/components/button), [Table]({{ site.baseurl }}/components/table), [SegmentedControl]({{ site.baseurl }}/components/SegmentedControl), and [NavBar]({{ site.baseurl }}/components/navbar) are examples of components.

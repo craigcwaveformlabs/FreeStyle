@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<body class="HolyGrail">
+  <div class="HolyGrail-body">
+    <main class="HolyGrail-content">
+      <h1 class="page-title">
+        {{ page.title }}
+      </h1>
+
+      {% include _scss-file-link.html %}
+
+      <div class="markdown-body">
+        {{ content }}
+      </div>
+    </main>
+    <nav class="HolyGrail-nav">
+      {% include _sidenav.html %}
+    </nav>
+    <aside class="HolyGrail-ads">
+      
+    </aside>
+  </div>
+
+</body>

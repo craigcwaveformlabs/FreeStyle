@@ -1,42 +1,144 @@
-<h4 class="menu-title">
-  <a href="{{ site.baseurl }}/guidance/components/">
-    Components
-  </a>
-</h4>
-<nav class="menu docs-menu">
-  {% for page in site.pages %}
-    {% if page.categories contains 'components' %}
-    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
-      {{ page.title }}
-    </a>
-    {% endif %}
-  {% endfor %}
-</nav>
 
-<h4 class="menu-title">
-  <a href="{{ site.baseurl }}/guidance/utilities/">
-    Utilities
-  </a>
-</h4>
-<nav class="menu docs-menu">
-  {% for page in site.pages %}
-    {% if page.categories contains 'utilities' %}
-    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
-      {{ page.title }}
-    </a>
-    {% endif %}
-  {% endfor %}
-</nav>
 
-<h4 class="menu-title">
-  Guidance
-</h4>
-<nav class="menu docs-menu">
-  {% for page in site.pages %}
-    {% if page.categories contains 'guidance' %}
-    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
-      {{ page.title }}
-    </a>
-    {% endif %}
-  {% endfor %}
-</nav>
+<ul id="accordion" class="accordion">
+
+  {% assign sorted_pages = site.pages | sort:"order" %}
+
+  <li class="{% if page.categories == 'principles'%}open{%endif%}">
+    <div class="link menu-title">Principles</div>
+    <nav class="submenu menu docs-menu">
+      {% for page in sorted_pages %}
+        {% if page.categories contains 'principles' %}
+        <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+          {{ page.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </li>
+
+  <li class="{% if page.categories == 'basics'%}open{%endif%}">
+    <div class="link menu-title">Basics</div>
+    <nav class="submenu menu docs-menu">
+      {% for page in sorted_pages %}
+        {% if page.categories contains 'basics' %}
+        <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+          {{ page.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </li>
+
+  <li class="{% if page.categories == 'components'%}open{%endif%}">
+    <div class="link menu-title">Components</div>
+    <nav class="submenu menu docs-menu">
+      {% for page in sorted_pages %}
+        {% if page.categories contains 'components' %}
+        <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+          {{ page.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </li>
+
+  <li class="{% if page.categories == 'templates'%}open{%endif%}">
+    <div class="link menu-title">Templates</div>
+    <nav class="submenu menu docs-menu">
+      {% for page in sorted_pages %}
+        {% if page.categories contains 'templates' %}
+        <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+          {{ page.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </li>
+
+  <li class="{% if page.categories == 'features'%}open{%endif%}">
+    <div class="link menu-title">Features</div>
+    <nav class="submenu menu docs-menu">
+      {% for page in sorted_pages %}
+        {% if page.categories contains 'features' %}
+        <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+          {{ page.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </li>
+
+  <li class="{% if page.categories == 'applications'%}open{%endif%}">
+    <div class="link menu-title">Applications</div>
+    <nav class="submenu menu docs-menu">
+      {% for page in sorted_pages %}
+        {% if page.categories contains 'applications' %}
+        <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+          {{ page.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </li>
+
+  <li class="{% if page.categories == 'utilities'%}open{%endif%}">
+    <div class="link menu-title"> Utilities </div>
+    <nav class="submenu menu docs-menu">
+      {% for page in sorted_pages %}
+        {% if page.categories contains 'utilities' %}
+        <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+          {{ page.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </li>
+
+  <li class="{% if page.categories == 'guidance'%}open{%endif%}">
+    <div class="link menu-title">Guidance</div>
+    <nav class="submenu menu docs-menu">
+      {% for page in sorted_pages %}
+        {% if page.categories contains 'guidance' %}
+        <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+          {{ page.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </li>
+
+</ul>
+
+
+
+
+<!-- jQuery to activate dropdown -->
+<script>
+$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Private variables
+		var links = this.el.find('.link');
+		// Events
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+
+		if (!e.data.multiple) {
+			$el.find('.docs-menu').not($next).slideUp().parent().removeClass('open');
+		};
+	}
+
+	var accordion = new Accordion($('#accordion'), false);
+});
+</script>

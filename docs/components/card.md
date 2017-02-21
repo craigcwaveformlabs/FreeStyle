@@ -2,6 +2,7 @@
 categories: components
 layout: page
 title: Card
+order: 1
 ---
 Cards are self-contained modules of text and, optionally, media. They automatically expand to fit the width of their parent container, but can be constrained using our Grid component.
 

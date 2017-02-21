@@ -3,6 +3,7 @@ categories: components
 layout: page
 scss-filename: _segmented-control.scss
 title: Segmented Control
+order: 1
 ---
 
 A segmented control is a horizontal control made of multiple segments, each segment functioning as a discrete button. Segment text gets truncated when too long to fit into the width of the segment.

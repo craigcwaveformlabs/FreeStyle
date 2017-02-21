@@ -1,8 +1,9 @@
 ---
 categories: components
-layout: simple-full-width
+layout: page
 scss-filename: _block-grid.scss
 title: Block Grid
+order: 1
 ---
 Block grids give us a way to evenly split content within a grid. If we want a row of five images that need to stay evenly spaced no matter the screen size, we use the block grid. Breakpoints are defined in our [utility values]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss).
 
