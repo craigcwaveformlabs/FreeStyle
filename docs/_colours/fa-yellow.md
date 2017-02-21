@@ -1,7 +1,8 @@
 ---
 name: fa-yellow
-group: secondary
+group: primary
 HEX: FFB608
-RBGA: 255, 182, 8, 1
+RBG: 255, 182, 8
 description: Primary yellow.
+order: 99
 ---

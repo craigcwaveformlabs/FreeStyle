@@ -2,6 +2,7 @@
 name: fa-red
 group: primary
 HEX: FD331D
-RBGA: 253, 51, 29, 1
+RBG: 253, 51, 29
 description: Primary red.
+order: 99
 ---

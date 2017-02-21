@@ -2,6 +2,7 @@
 name: fa-amber
 group: primary
 HEX: FF9302
-RBGA: 255, 147, 2, 1
+RBG: 255, 147, 2
 description: Primary amber.
+order: 99
 ---

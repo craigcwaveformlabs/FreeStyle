@@ -1,6 +1,6 @@
 ---
 categories: basics
-layout: page
+layout: holy
 title: Colour
 order: 0
 ---
@@ -35,7 +35,7 @@ Colour swatches to grab from. These are available as illustrator swatches and wi
 
 <!-- Loop through colours collection to build colour swatch. Be careful with naming of colour as this is used for the background colour variable. -->
 
-{% assign entries = site.colours %}
+{% assign entries = site.colours | sort:"order" %}
 
 #### Primary
 
@@ -49,7 +49,6 @@ Colour swatches to grab from. These are available as illustrator swatches and wi
   </div>
 </div>
 
-
 #### Secondary
 <div class="SwatchGroup">
   <div class="BlockGrid md-1 lg-3">
@@ -62,8 +61,21 @@ Colour swatches to grab from. These are available as illustrator swatches and wi
 </div>
 
 
+#### Greys
+<div class="SwatchGroup">
+  <div class="BlockGrid md-1 lg-3">
+    {% for item in entries %}
+      {% if item.group == 'greys' %}
+        {% include colour_swatch.html %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
 ## Type
 Colour for type
+
 
 ## Navigation
 Colour for type

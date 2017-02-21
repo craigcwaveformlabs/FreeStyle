@@ -14,12 +14,14 @@
 .Swatch-preview {
   content: "";
   display: block;
-  height: 60px;
+  height: 120px;
 }
 
 .Swatch-detail {
   @include padding(small);
   @include text-color(gray-8);
+  border: 2px solid #E8E8E8;
+  border-top: none;
 }
 
 .Swatch-detail-variable {
