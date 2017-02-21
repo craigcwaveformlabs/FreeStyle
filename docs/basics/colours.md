@@ -30,53 +30,36 @@ Words
 ## Brand Colours
 Colour swatches to grab from. These are available as illustrator swatches and within Sketch templates.
 
-_toDo - Try and create a link to these in the sidebar_
+<!-- _toDo - Try and create a link to sketch template in the sidebar_ -->
 
-<!-- <section class="SwatchGroup">
 
-  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
-    <div class="DocsExample-preview DocsExample-preview--fa-yellow">
-      &nbsp;
-    </div>
-    {% example scss %}
-    fa-yellow;
-    HEX: #000000;
-    RBG: 0/0/0;
-    {% endexample %}
+<!-- Loop through colours collection to build colour swatch. Be careful with naming of colour as this is used for the background colour variable. -->
+
+{% assign entries = site.colours %}
+
+#### Primary
+
+<div class="SwatchGroup">
+  <div class="BlockGrid md-1 lg-3">
+    {% for item in entries %}
+      {% if item.group == 'primary' %}
+        {% include colour_swatch.html %}
+      {% endif %}
+    {% endfor %}
   </div>
-
-</section> -->
-
+</div>
 
 
-<section class="SwatchGroup">
-  <div class="BlockGrid md-3 lg-5">
-
-    <div class="BlockGrid-item Swatch">
-      <div class="Swatch-preview">
-        <div class="DocsExample-preview DocsExample-preview--fa-yellow">
-          &nbsp;
-        </div>
-      </div>
-      <div class="Swatch-detail">
-        <p class="Swatch-detail-variable"> fa-yellow </p>
-      </div>
-    </div>
-
-    <div class="BlockGrid-item Swatch">
-      <div class="Swatch-preview">
-        <div class="DocsExample-preview DocsExample-preview--fa-amber">
-          &nbsp;
-        </div>
-      </div>
-      <div class="Swatch-detail">
-        <p class="Swatch-detail-variable"> fa-amber </p>
-      </div>
-    </div>
-
+#### Secondary
+<div class="SwatchGroup">
+  <div class="BlockGrid md-1 lg-3">
+    {% for item in entries %}
+      {% if item.group == 'secondary' %}
+        {% include colour_swatch.html %}
+      {% endif %}
+    {% endfor %}
   </div>
-</section>
-
+</div>
 
 
 ## Type

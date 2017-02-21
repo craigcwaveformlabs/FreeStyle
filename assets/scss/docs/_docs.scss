@@ -686,3 +686,36 @@ ul ul ul {
     order: 3;
   }
 }
+
+
+
+
+/*
+   Color swatches
+   ========================================================================== */
+.color__tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 98%;
+  height: 100px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb; }
+
+.color__name {
+  font-size: 0.64rem;
+  color: #4c4c4c;
+  white-space: nowrap;
+  margin: 0 2px;
+  padding: 0 5px;
+  background-color: #f6f6f6;
+  white-space: normal; }
