@@ -1,0 +1,119 @@
+---
+
+- name: fa-blue
+  group: primary
+  HEX: 007ABF
+  RBG: 0, 122, 191
+  description: Primary blue.
+  order: 1
+
+- name: fa-green
+  group: primary
+  HEX: 7CC04A
+  RBG: 124, 192, 74
+  description: Primary green.
+  order: 1
+
+- name: fa-purple
+  group: primary
+  HEX: 76368E
+  RBG: 118, 54, 142
+  description: Primary purple.
+  order: 1
+
+- name: fa-red
+  group: primary
+  HEX: FD331D
+  RBG: 253, 51, 29
+  description: Primary red.
+  order: 1
+
+- name: fa-amber
+  group: primary
+  HEX: FF9302
+  RBG: 255, 147, 2
+  description: Primary amber.
+  order: 99
+
+- name: fa-yellow
+  group: primary
+  HEX: FFB608
+  RBG: 255, 182, 8
+  description: Primary yellow.
+  order: 1
+
+
+
+
+
+- name: fa-blue--xx-dark
+  group: blue
+  HEX: 00447A
+  RBG: 0, 68, 112
+  description: Blue - extra extra dark variant.
+  order: 1
+
+- name: fa-blue--x-dark
+  group: blue
+  HEX: 005994
+  RBG: 0, 89, 148
+  description: Blue - extra dark variant.
+  order: 2
+
+- name: fa-blue--dark
+  group: blue
+  HEX: 0069AD
+  RBG: 0, 105, 173
+  description: Blue - dark variant.
+  order: 3
+
+- name: fa-blue
+  group: blue
+  HEX: 007ABF
+  RBG: 0, 122, 191
+  description: Primary blue.
+  order: 4
+
+- name: fa-blue--x-light
+  group: blue
+  HEX: E4F0F6
+  RBG: 228, 240, 246
+  description: Blue - extra light variant.
+  order: 5
+
+- name: fa-blue--xx-light
+  group: blue
+  HEX: F4F8FB
+  RBG: 244, 248, 251
+  description: Blue - extra extra light variant.
+  order: 6
+
+
+
+- name: fa-green--text
+  group: green
+  HEX: 629F23
+  RBG: 98, 159, 35
+  description: Green - text variant
+  order: 1
+
+- name: fa-green--dark
+  group: green
+  HEX: 6AAC39
+  RBG: 106, 172, 57
+  description: Green - dark variant
+  order: 2
+
+- name: fa-green
+  group: green
+  HEX: 7CC04A
+  RBG: 124, 192, 74
+  description: Primary green.
+  order: 3
+
+- name: fa-green--x-light
+  group: green
+  HEX: E1EED8
+  RBG: 225, 238, 216
+  description: Green - extra light.
+  order: 4

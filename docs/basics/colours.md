@@ -1,6 +1,6 @@
 ---
 categories: basics
-layout: holy
+layout: page
 title: Colour
 order: 0
 ---
@@ -34,8 +34,10 @@ Colour swatches to grab from. These are available as illustrator swatches and wi
 
 
 <!-- Loop through colours collection to build colour swatch. Be careful with naming of colour as this is used for the background colour variable. -->
+{% assign entries = site.data.colors | sort:"order" %}
 
-{% assign entries = site.colours | sort:"order" %}
+
+
 
 #### Primary
 
@@ -49,11 +51,11 @@ Colour swatches to grab from. These are available as illustrator swatches and wi
   </div>
 </div>
 
-#### Secondary
+#### Blues
 <div class="SwatchGroup">
   <div class="BlockGrid md-1 lg-3">
     {% for item in entries %}
-      {% if item.group == 'secondary' %}
+      {% if item.group == 'blue' %}
         {% include colour_swatch.html %}
       {% endif %}
     {% endfor %}
@@ -61,11 +63,11 @@ Colour swatches to grab from. These are available as illustrator swatches and wi
 </div>
 
 
-#### Greys
+#### Greens
 <div class="SwatchGroup">
   <div class="BlockGrid md-1 lg-3">
     {% for item in entries %}
-      {% if item.group == 'greys' %}
+      {% if item.group == 'green' %}
         {% include colour_swatch.html %}
       {% endif %}
     {% endfor %}
@@ -75,6 +77,18 @@ Colour swatches to grab from. These are available as illustrator swatches and wi
 
 ## Type
 Colour for type
+
+<div class="Grid-row">
+  <div class="Grid-col sm-12 md-5 lg-5" style='border-top: 3px solid #007abf; background:#F4F8FB'>
+    <h4>Do's</h4>
+    <p> List of things that you can do </p>
+  </div>
+  <div class="Grid-col sm-12 md-5 lg-5" style='border-top: 3px solid #007abf; background:#F4F8FB'>
+    <h4>Dont's</h4>
+    <p> List of things that you can do </p>  
+  </div>
+</div>
+
 
 
 ## Navigation
